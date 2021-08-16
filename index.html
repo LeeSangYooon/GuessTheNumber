@@ -1,0 +1,79 @@
+<head>
+    <title> GUESS THE NEXT NUMBER!</title>
+
+    <style>
+        #panel{
+            height: 90;
+            width: 100%;
+            padding-top: 100px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #num{
+            font-weight: bold;
+            font-size: 90;
+            padding: 10px;
+            margin: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .testbox {
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            font-size: 14pt;
+        }
+        button {
+            width: 130px;
+            height: 40px;
+            padding: 10px;
+            border: none;
+            -webkit-border-radius: 5px; 
+            -moz-border-radius: 5px; 
+            border-radius: 5px; 
+            background-color: #376deb;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+        }
+        #comment{
+            color:gray;
+        }
+        select {
+            width: 100px;
+            padding: 7px 0;
+            background: transparent;
+        }
+    </style>
+    
+</head>
+<body>
+    <center>
+        <p style="text-align: center; font-size:60pt"> Guess the next number! </p>
+
+        <div id="panel"> 
+        </div>
+
+        <p id="comment"> </p>
+
+        
+        <div style="margin-top:130px;"> 
+            <input type="text" class="testbox" id="input" onkeyup="if(window.event.keyCode==13){submit()}">
+            <button onclick="submit()"> Submit </button>
+            <div style="margin-top: 10px;">
+                <select id="level">
+                    <option value="1">Easy</option>
+                    <option value="2">Normal</option>
+                    <option value="3">Hard</option>
+                    <option value="4">Insane</option>
+                    <option value="5">Random</option>
+                </select>
+                <button onclick="NextProblem()"> Next Problem </button>
+            </div>
+            
+        </div>
+        <script src="main.js"></script>
+    </center>
+</body>
